@@ -2,8 +2,8 @@
 """
    Basic Cache Class
 """
-from collections import OrderedDict
-from base_caching import BaseCaching
+OrderedDict = __import__('collections').OrderedDict
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class FIFOCache(BaseCaching):

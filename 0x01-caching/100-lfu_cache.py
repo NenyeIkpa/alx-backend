@@ -36,7 +36,7 @@ class LFUCache(BaseCaching):
             elif freq_key[1] < self.freq_keys[max_positions[-1]][1]:
                 max_positions.append(i)
         max_positions.reverse()
-        for positiom in max_positions:
+        for position in max_positions:
             if self.freq_keys[position][1] > mru_freq:
                 break
             insert_position = position
@@ -52,7 +52,7 @@ class LFUCache(BaseCaching):
             if len(self.cache_data) + 1 > BaseCaching.MAX_ITEMS:
                 lfu_key, _ = self.keys_freq[-1]
                 self.cache_data.pop(lfu_key)
-                self.keys_freq.pop()
+                self.freq_keys.pop()
                 print("DISCARD:", lfu_key)
             self.cache_data[key] = item
             insert_index = len(self.freq_keys)

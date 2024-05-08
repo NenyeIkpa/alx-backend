@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-   Basic Cache Class
+   LIFO Cache Class
 """
 OrderedDict = __import__('collections').OrderedDict
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class FIFOCache(BaseCaching):
+class LIFOCache(BaseCaching):
     """ LIFO caching logic """
 
     def __init__(self):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-   LIFO Cache Class
+   FIFO Cache Class
 """
 from collections import OrderedDict
 from base_caching import BaseCaching

@@ -7,7 +7,7 @@
 import pytz
 from typing import Union, Dict
 from flask import Flask, render_template, request, g
-from flask_babel import Babel
+from flask_babel import Babel, format_datetime
 
 
 class Config:
@@ -74,7 +74,8 @@ def get_locale() -> str():
 @app.route('/')
 def index() -> str:
     """ prints text in html format """
-    return render_template('7-index.html')
+    g.time = format_datetime()
+    return render_template('index.html')
 
 
 if __name__ == '__main__':

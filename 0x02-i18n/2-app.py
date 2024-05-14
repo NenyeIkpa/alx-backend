@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 """
-  Basic Flask App - Configuraion with Babel
+  Basic Flask App - Get locale with babel.localeselector
 """
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_babel import Babel
 
 

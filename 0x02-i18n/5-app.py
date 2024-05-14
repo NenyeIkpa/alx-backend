@@ -4,7 +4,8 @@
   Basic Flask - Detecting CL query for locale
 """
 
-from flask import Flask, render_template, request
+from typing import Union, Dict
+from flask import Flask, render_template, request, g
 from flask_babel import Babel
 
 

@@ -11,6 +11,6 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
+def index() -> str:
     """ prints text in html format """
     return render_template('templates/index.html')
